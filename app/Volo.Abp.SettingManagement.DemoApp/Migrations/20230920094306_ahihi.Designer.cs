@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Volo.Abp.EntityFrameworkCore;
 using Volo.Abp.SettingManagement.DemoApp;
@@ -12,9 +13,11 @@ using Volo.Abp.SettingManagement.DemoApp;
 namespace Volo.Abp.SettingManagement.DemoApp.Migrations
 {
     [DbContext(typeof(DemoAppDbContext))]
-    partial class DemoAppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230920094306_ahihi")]
+    partial class ahihi
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

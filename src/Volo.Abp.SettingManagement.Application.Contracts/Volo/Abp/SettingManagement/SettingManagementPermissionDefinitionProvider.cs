@@ -12,9 +12,12 @@ public class SettingManagementPermissionDefinitionProvider : PermissionDefinitio
 
         var emailPermission = moduleGroup
             .AddPermission(SettingManagementPermissions.Emailing, L("Permission:Emailing"));
+        
         emailPermission.StateCheckers.Add(new AllowChangingEmailSettingsFeatureSimpleStateChecker());
 
         emailPermission.AddChild(SettingManagementPermissions.EmailingTest, L("Permission:EmailingTest"));
+
+        var layoutPermission = moduleGroup.AddPermission(SettingManagementPermissions.Layouting, L("Permission:Layouting"));
     }
 
     private static LocalizableString L(string name)
